@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daniel Corcoran - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W80G9LKDET"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W80G9LKDET');
+    </script>
+</head>
+<body>
+    <div id="header">
+
+    <div id="header-desktop">
+        <h1 class="logo">Daniel Corcoran</h1>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="/static/resume.pdf"  target="_blank">Resume</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </div>
+    <div id="header-mobile">
+    <h1 class="logo">Daniel Corcoran</h1>
+    <input type="checkbox" id="menu-toggle" style="display: none">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav>
+        <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="/static/resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+    </div>
+
+
+    <div id="content">
+    {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer">
+        <p> © 2023 Daniel Corcoran</p>
+    </div>
+</body>
+</html>

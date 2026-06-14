@@ -1,0 +1,166 @@
+{% block title %}Projects{% endblock %}
+{% extends "base.html" %}
+
+{% block content %}
+
+    <style>
+    #about_me {
+
+        font-family: Arial, sans-serif;
+        text-align: center;
+        align-content: center;
+
+    }
+    #about_me hr {
+        width: 66%;
+    }
+    p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img {
+        max-width: 100%;
+    }
+    .project {
+        border-bottom: solid 2px black;
+        margin: auto;
+    }
+
+
+    .project{
+        background-color: white;
+        color: black;
+    }
+
+    @media only screen and (max-width: 600px){
+
+        p {
+            max-width: 90%;
+        }
+        .project {
+            width: 100%;
+
+        }
+        .project img {
+            width: 90%;
+        }
+
+    }
+
+    @media only screen and (min-width: 600px){
+        p {
+            width: 100%;
+        }
+        .project {
+            width: 66%;
+            padding: 15px;
+
+        }
+        .project img {
+            width: 400px;
+        }
+
+
+    }
+
+
+
+
+    </style>
+    <div id="about_me">
+    <h1>Projects</h1><br>
+    <div class="project">
+    <h2>AromaVerse - Senior Thesis Project</h2>
+
+    <p>I worked on the AromaVerse as my senior thesis project alongside <a href="https://www.linkedin.com/in/alexander-sahatjian-37625b184/">Alex Sahatjian</a> and under the
+    generous support of <a href="https://www.givaudan.com">Givaudan</a>. <br><br>My Advisors were Dr. Yong Xu and Dr. Jacob Farr.
+    </p>
+
+    <p>The goal of this project was to create a virtual reality platform with aroma capabilities that will give users a novel and engaging way to experience, create and share aromatic experiences.</p>
+
+
+    <img src="static/aromaverse_1.png">
+        <p>The AromaPlay headset synchronizes with the Oculus Quest 2 to dispense aromas. </p>
+
+
+    <img src="static/aromaverse_2.png" >
+    <p> Users could create their own coffee blend in the simulation, picking up the coffee cup to smell it. </p>
+    <img src="static/aromaverse_3.png" >
+    <p> We had a lot of fun designing this project for Givaudan. </p>
+
+    </div>
+
+
+    <div class="project">
+    <h2>Lunar Launcher</h2>
+    <br>
+    <img src="static/lunar_launcher.gif" >
+
+    <p>I programmed the first version of this game my freshman year as the final project in my intro to CS class. The first version was written in C++ using the openGL library. <br><br> I recently revisited it to re-write it in C#, and compiled it to a web app so you can play online. <br><br> Check it out at the link <a href="lunarlauncher.danielcorcoran.xyz>">here.</a></p>
+    </div>
+
+    <div class="project">
+    <h2>SpectralFlow</h2>
+    <p>While in my sophomore year I worked alongside Dr. Manasses Jora of Astrazenica to design an algorithm to detect and characterize known and unknown
+    ribonucleoside modifications from LC-MS/MS data. The process of discovering these biological molecules was previously a
+    very resource-intensive and manual process. We found an algorithm that would cluster the molecules in an unsupervised
+        way, enabling us to detect with confidence molecules by constructing a reference library.</p>
+   <img src="static/modnet.png" >
+
+    <p>Screenshot of the clustering which allowed us to identify both known and unknown ribonucleosides. Interactive model available <a href="http://bearcatms.uc.edu/spectral-network-interactive/">here.</a></p>
+
+    <p>We packaged our algorithm into a software called "SpectralFlow" and delivered it in the peer reviewed article <a href="https://pubs.acs.org/doi/abs/10.1021/acs.analchem.2c03172"><i>Higher-Energy Collisional Dissociation Mass Spectral Networks for the Rapid, Semi-automated Characterization of Known and Unknown Ribonucleoside Modifications</i>, published in ACS Analytical chemistry. </a></p>
+
+    </div>
+    <div class="project">
+    <h2>seeOS / Tree Camera</h2>
+
+    <p>seeOS is an operating system for home security cameras that simplifies the deployment of edge computer vision models. The main feature was a web GUI where users could monitor their security system and a custom kernel that loads and unloads AI modules from the on-board processor.
+
+    As part of this project I also engineered a custom camera system based on the google coral edge TPU, complete with a 3D printed enclosure and mounting system.<br>
+
+
+        The project is available on github <a href="https://github.com/daniel-corcoran/seeOS">here</a></p>
+
+        <img src="static/seeOS.png" >
+        <p>Screenshot of seeOS web interface where users can monitor and control the OS</p>
+
+        <img src="static/treeside.png" >
+        <p>Tree Camera, a camera system with an in-built AI processor for running computer vision models without a dedicated external processor
+    </div>
+
+    <div class="project">
+    <h2>River Programming Language</h2>
+    <p>I designed and implemented a esoteric programming language in an effort to learn more about language design and compiler design. <br><br>
+
+        The language is composed of two parts. First, a bytecode system called "afex" which I originally designed in high school to run on the TI-83+ calculator.
+
+        afex is similar to assembly in that it is a bytecode language with simple operations such as add, jmp, comparisons, etc. <br><br>
+
+        The river programming language builds on the afex bytecode interpreter to add another layer of abstraction with variable declarations and complex arithmetic<br><br>
+
+        (so a declaration like a + (b * c) = d can be broken into it's constituents via an abstract syntax tree, executed sequentially, the results are stored in pointers, etc). <br><br>
+
+        I have included some simple programs with the web interface for you to test, but it's very primitive and doesn't have much functionality. <br><br>
+
+        My ultimate goal is to render a mandelbrot set with this language. <<br><br>
+
+        You can check it out via the <a href="https://github.com/daniel-corcoran/river">GitHub Repository</a> or use the <a href="http://river.danielcorcoran.xyz">Web Application. </a>
+
+    </p>
+    </div>
+
+    <div class="project">
+    <h2>Chaos Explorer</h2>
+        <img src="static/fractalz.PNG">
+        <p>A CUDA-enabled fractal renderer created to learn parallel computing. It's rendered in C++ using the openGL library and supports zooming. One of the limitations is you can't zoom after a certain point due to limits on the precision of floating point numbers in CUDA.  I'm sure there's a way around this but never got around to figuring it out. </p>
+        <a href="https://github.com/daniel-corcoran/ChaosExplorer">Link to GitHub Repository</a>
+
+        </p>
+    </div>
+    </div>
+
+    <!-- Add more HTML here to build the full about page -->
+{% endblock %}

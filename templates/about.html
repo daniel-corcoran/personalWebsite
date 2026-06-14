@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+    <style>
+    @media only screen and (max-width: 600px) {
+        #about_me {
+
+
+        }
+        #about_me p {
+            margin: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+        #about_me {
+            width: 90%;
+            margin:auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-family: sans-serif;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        #about_me {
+
+
+        }
+        #about_me p {
+            margin: 10px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+        #about_me {
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-family: sans-serif;
+        }
+    }
+
+
+
+    </style>
+    <div id="about_me">
+
+        <h1>About Me!</h1>
+
+        <p>Hello, and thank you for visiting my website!</p>
+
+        <p>My name is Daniel, and I'm a computer scientist living in Cincinnati.</p>
+
+        <p>I studied computer science at the University of Cincinnati and have been involved with many professional associations and activities.</p>
+
+        <h2>My Story</h2>
+
+        <p>I was born in South Carolina in 2000 to a high school teacher and a US Marine. Due to my dad's job, we moved frequently, about every 1-3 years. By the time I was 15, I had already moved over a dozen times. During my education, my mom homeschooled me for about six years and I feel very fortunate to have been raised by a family that values education.</p>
+
+        <p>As a child, I was always inclined towards engineering. Every Christmas, I would ask for Legos and build increasingly complex contraptions. When I was 12, I even built a working mechanical clock. It was during this stage in life that I developed a passion for fishing. My friends and I would go fishing almost every day after school. I enjoyed it because it allowed me to connect with nature, and the problem-solving involved in fishing rigs and setups satisfied that engineering itch. </p>
+
+        <p>As I got older, I developed an entrepreneurial spirit. I started cleaning cars and mowing lawns to fund my hobbies. I still nurture this entrepreneurial spirit, and my dream is to one day operate a successful engineering firm.</p>
+
+        <p>In college, I was involved in several activities, including:</p>
+
+        <ul>
+            <li><strong><a href="https://ucengineeringdiplomats.weebly.com/">UC Engineering Diplomats:</a></strong> A student organization dedicated to nurturing the relationship between UC students and the JCI students from Chongqing University in China.</li>
+            <li><strong><a href="https://ucsolarcar.weebly.com/">Bearcat Solar Car Team:</a></strong> UC's team that races in the Formula Sun Grand Prix. I started as an engineer working on the computer systems, developing most of the low voltage system that monitored sensors and lights. I was later elected as president of the team, where I led 30 students in submitting the first official vehicle design report. I also secured three corporate sponsorships totaling $25,000 for the team.</li>
+            <li><strong><a href="http://bearcatms.uc.edu/new/meet-the-group/">Limbach Group Biological Mass Spectrometry:</a></strong> As an undergraduate researcher, I designed an algorithm to detect known and discover unknown ribonucleoside modifications from LC-MS/MS data. We published our findings in the ACS Analytical Chemistry Journal.</li>
+        </ul>
+
+        <h2>Hobbies</h2>
+        <p>In my free time, I enjoy:</p>
+
+        <ul>
+            <li>Working Out</li>
+            <li>Making Stuff</li>
+            <li>Fishing</li>
+        </ul>
+
+        <h2>Technical Interests</h2>
+        <p>When I'm working on something engineering related, it's usually related to:</p>
+        <ul>
+            <li><a href="http://debatex.danielcorcoran.xyz">Tools for Thought</a></li>
+            <li><a href="http://lunarlauncher.danielcorcoran.xyz">Game Development</a></li>
+            <li>Linux Operating System</li>
+            <li><a href="https://github.com/daniel-corcoran/seeOS">Computer Vision</a></li>
+            <li>Virtual Reality</li>
+            <li><a href="http://river.danielcorcoran.xyz">Novel Programming Languages</a></li>
+            <li>Cybersecurity</li>
+        </ul>
+
+        <h2>Aspirations</h2>
+        <p>My primary aspiration in life is to start and grow a thriving business. I hope to create something that brings value and joy to people's lives and becomes an integral part of their everyday routines.</p>
+        <p>A secondary aspiration of mine is to maintain a sense of adventure. Throughout my upbringing, I had the privilege of experiencing many parts of the world that remain hidden to most people. I aim to continue pushing beyond my comfort zone, exploring different cultures, meeting new people, and gaining a broader perspective of life on this earth. By doing so, I hope to find innovative ways to contribute and make a positive impact in making the world a better place.</p>
+    </div>
+
+    <!-- Add more HTML here to build the full about page -->
+{% endblock %}

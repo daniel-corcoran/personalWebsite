@@ -1,0 +1,32 @@
+{% block title %}Home{% endblock %}
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+    #home {
+        background-color: #1f212a;
+        color: white;
+        font-family: sans-serif;
+        align-content: center;
+        padding-top: 50px;
+        text-align: center;
+    }
+    #content {
+        background-color:  #1f212a;
+    }
+    a {
+        text-decoration: whitesmoke;
+        color: lightblue;
+    }
+    </style>
+<div id="home">
+
+<h2 style="font-weight: lighter">Welcome to my personal website!</h2>
+<p>Try out my latest game: <a href="https://lunarlauncher.danielcorcoran.xyz">Lunar Launcher!</a></p><br><br>
+<a href="https://lunarlauncher.danielcorcoran.xyz" style="background: #101010;"><img src="static/lunar_launcher.gif" class="full_width_gif"></a>
+
+</div>
+
+
+    <!-- Add more HTML here to build the full home page -->
+{% endblock %}
